@@ -45,7 +45,7 @@ import tokenlib_public
 ## SETUP VARIABLES ##
 #####################
 # botname is set in tokenlib_public.py
-csv_url="https://raw.githubusercontent.com/TechnoMystics-org/ea_rss_bot_feeds/main/technews_rss.csv"
+#csv_url="https://raw.githubusercontent.com/TechnoMystics-org/ea_rss_bot_feeds/main/technews_rss.csv"
 temp_csv_path="./temp.csv"
 last_run_path="./rssbot_lastrun.txt"
 time_format_code = '%Y-%m-%d:%H:%M'
@@ -54,15 +54,15 @@ now_str = now_dt.strftime(time_format_code)
 print("Now: "+now_str)
 
 # Hashtags for toots, seperate by spaces
-hashtagcontent = "#technews"
+hashtagcontent = "#nhr"
 
 ## Testing URL Hosted CSV
-r = requests.get(csv_url, stream = True)
+#r = requests.get(csv_url, stream = True)
 # write the returned chunks to file
-with open(temp_csv_path,"wb") as tempcsv:
-    for chunk in r.iter_content(chunk_size=1024):
-         if chunk:
-             tempcsv.write(chunk)
+#with open(temp_csv_path,"wb") as tempcsv:
+#    for chunk in r.iter_content(chunk_size=1024):
+#         if chunk:
+#             tempcsv.write(chunk)
 
 ## GET LAST RUN ##
 # Get the last time we ran this script
@@ -163,7 +163,7 @@ if len(new_entries) > 0:
     ####################################
     ## now lets get the tokens for our bot
     ## we choose pixey for now
-    tokendict=tokenlib_public.getmytokenfor("enlightened.army")
+    tokendict=tokenlib_public.getmytokenfor("hessen.social")
     pa_token = tokendict["pa_token"]
     host_instance = tokendict["host_instance"]
     botname = tokendict["botname"]
