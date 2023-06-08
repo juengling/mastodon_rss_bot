@@ -48,7 +48,7 @@ import tokenlib_public
 #csv_url="https://raw.githubusercontent.com/TechnoMystics-org/ea_rss_bot_feeds/main/technews_rss.csv"
 temp_csv_path="./temp.csv"
 last_run_path="./rssbot_lastrun.txt"
-time_format_code = '%Y-%m-%d:%H:%M'
+time_format_code = '%Y-%m-%d:%H:%M\n'
 now_dt = datetime.now()
 now_str = now_dt.strftime(time_format_code)
 print("Now: "+now_str)
